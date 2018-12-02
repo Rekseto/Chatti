@@ -1,13 +1,25 @@
-export const fetchChatRequest = () => ({
-  type: "CHAT_FETCH_REQUEST"
+export const listenChatRequest = dispatch => ({
+  type: "CHAT_LISTEN_REQUEST",
+  payload: {
+    dispatch
+  }
 });
 
-export const fetchChatSuccesss = data => ({
-  type: "CHAT_FETCH_SUCCESS",
-  payload: data
+export const listenChatRetrive = messages => ({
+  type: "CHAT_LISTEN_RETRIVE",
+  payload: [...messages]
+});
+
+export const addMessage = message => ({
+  type: "MESSAGE_ADD_REQUEST",
+  payload: {
+    username: "Anon",
+    date: new Date(),
+    message
+  }
 });
 
 export default {
-  fetchChatRequest,
-  fetchChatSuccesss
+  addMessage,
+  listenChatRequest
 };

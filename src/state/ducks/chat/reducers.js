@@ -7,12 +7,7 @@ const initialState = {
 };
 
 const actionHandlers = {
-  CHAT_FETCH_REQUEST: (state, action) => {
-    return R.evolve(R.__, state)({
-      fetching: R.T
-    });
-  },
-  CHAT_FETCH_SUCCESS: (state, action) => {
+  CHAT_LISTEN_RETRIVE: (state, action) => {
     return R.evolve(R.__, state)({
       fetching: R.F,
       messages: R.always(action.payload)
