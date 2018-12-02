@@ -4,16 +4,17 @@ import {connect} from "react-redux";
 import {chatActions} from "../../state/ducks/chat";
 
 import Message from "../../components/Message";
+import "./index.css";
 
 class Chat extends Component {
   componentDidMount() {
-    this.props.chatFetch();
+    this.props.chatListen();
   }
 
   render() {
     const {messages} = this.props;
     return (
-      <section>
+      <section className="chat__container">
         {messages.map(el => {
           return <Message message={el} />;
         })}
@@ -24,7 +25,7 @@ class Chat extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    chatFetch: () => dispatch(chatActions.fetchChatRequest())
+    chatListen: () => dispatch(chatActions.listenChatRequest(dispatch))
   };
 };
 

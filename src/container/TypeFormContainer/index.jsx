@@ -8,6 +8,7 @@ class TypeForm extends Component {
     super();
 
     this.changeContent = this.changeContent.bind(this);
+    this.sendMessage = this.sendMessage.bind(this);
   }
 
   state = {
@@ -22,13 +23,22 @@ class TypeForm extends Component {
 
   sendMessage(e) {
     e.preventDefault();
+
+    this.props.addMessage(this.state.content);
+
+    this.changeContent("");
   }
 
   render() {
     return (
-      <form onSubmit={e => this.sendMessage(e)}>
-        <input type="text" onChange={e => this.changeContent(e.target.value)} />
-        <input type="submit" />
+      <form onSubmit={e => this.sendMessage(e)} className="typeForm">
+        <input
+          type="text"
+          value={this.state.content}
+          onChange={e => this.changeContent(e.target.value)}
+          className="typeForm__text"
+        />
+        <input type="submit" className="typeForm__submit" />
       </form>
     );
   }
@@ -36,7 +46,7 @@ class TypeForm extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    chatFetch: () => dispatch(chatActions.fetchChatRequest())
+    addMessage: message => dispatch(chatActions.addMessage(message))
   };
 };
 
