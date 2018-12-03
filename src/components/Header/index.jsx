@@ -14,7 +14,7 @@ export default ({}) => {
             </Link>
           </li>
           <li className="navigation__element">
-            <Link className="navigation__link" to="/addCrime">
+            <Link className="navigation__link" to="/about">
               O Projekcie
             </Link>
           </li>
