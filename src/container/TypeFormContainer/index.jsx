@@ -37,6 +37,7 @@ class TypeForm extends Component {
           value={this.state.content}
           onChange={e => this.changeContent(e.target.value)}
           className="typeForm__text"
+          placeholder="Wpisz wiadomość"
         />
         <input type="submit" className="typeForm__submit" />
       </form>
