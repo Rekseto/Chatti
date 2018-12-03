@@ -1,0 +1,15 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  background: #161925;
+}
+
+.about__paragraph {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  color: #f7f7ff;
+  margin-top: 90px;
+}
