@@ -1,11 +1,17 @@
 .message {
   width: 100%;
-  color: #f7f7ff;
+  color: unset;
   display: flex;
+  color: white;
   margin: 10px;
   padding: 2px;
 }
 
 .message__username {
   width: 50px;
+}
+
+.message__content code {
+  border-radius: 7px;
+  padding: 5px;
 }
