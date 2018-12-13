@@ -1,5 +1,5 @@
 /dist
-
+/src/firebase/index.jsx
 # Logs
 logs
 *.log
