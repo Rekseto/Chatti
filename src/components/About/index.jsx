@@ -10,7 +10,7 @@ function Home() {
       <Header />
       <main className="about">
         <p className="about__paragraph">
-          Projekt miał celu nauczenie się korzystania z bazy &nbsp;
+          Projekt miał celu nauczenie się korzystania z bazy&nbsp;
           <a href="https://firebase.google.com/docs/firestore/">
             Firebase
           </a>&nbsp;od Google

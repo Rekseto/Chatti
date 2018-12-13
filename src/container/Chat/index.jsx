@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import PropTypes from "prop-types";
 import {connect} from "react-redux";
 
 import {chatActions} from "../../state/ducks/chat";
@@ -22,6 +23,10 @@ class Chat extends Component {
     );
   }
 }
+
+Chat.propTypes = {
+  messages: PropTypes.array
+};
 
 const mapDispatchToProps = dispatch => {
   return {
