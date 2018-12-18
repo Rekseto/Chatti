@@ -25,7 +25,8 @@ class Chat extends Component {
 }
 
 Chat.propTypes = {
-  messages: PropTypes.array
+  messages: PropTypes.array,
+  chatListen: PropTypes.func
 };
 
 const mapDispatchToProps = dispatch => {
