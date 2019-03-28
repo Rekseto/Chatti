@@ -15,11 +15,7 @@ class Chat extends Component {
   render() {
     const {messages} = this.props;
     return (
-      <section className="chat__container">
-        {messages.map(el => {
-          return <Message message={el} />;
-        })}
-      </section>
+      <section className="chat__container">{messages.map(Message)}</section>
     );
   }
 }

@@ -4,7 +4,7 @@ import Markdown from "react-markdown";
 import CodeBlock from "../CodeBlock";
 import "./index.css";
 
-export default ({message}) => {
+export default message => {
   return (
     <div className="message">
       <span className="message__username">{message.username}:</span>

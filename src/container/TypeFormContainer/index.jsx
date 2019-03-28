@@ -23,21 +23,18 @@ class TypeForm extends Component {
 
   sendMessage(e) {
     e.preventDefault();
-
+    this.changeContent(" ");
     this.props.addMessage(this.state.content);
-
-    this.changeContent("");
   }
 
   render() {
     return (
       <form onSubmit={e => this.sendMessage(e)} className="typeForm">
-        <input
-          type="text"
-          value={this.state.content}
+        <textarea
           onChange={e => this.changeContent(e.target.value)}
           className="typeForm__text"
-          placeholder="Wpisz wiadomość"
+          placeholder="Wpisz wiadomość.."
+          value={this.state.content}
         />
         <input type="submit" className="typeForm__submit" />
       </form>
