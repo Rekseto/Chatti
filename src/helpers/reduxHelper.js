@@ -1,16 +1,16 @@
 import {call, put} from "redux-saga/effects";
-/** 
- * Returns generator which will call a request for given endpoint, then 
+/**
+ * Returns generator which will call a request for given endpoint, then
  * based on result will dispatch proper action.
- * 
+ *
  * @param {string}   endpoint - Location to call a fetch
  * @param {string}   method - Method to use in request
  * @param {Function} success - Action to dispatch when succeed
  * @param {Function} fail - Action to dispatch when fail
- * 
+ *
  * @returns  {Function}
- * 
-*/
+ *
+ */
 export const createSagaApiCall = (endpoint, method, success, fail) => {
   return function*(action) {
     try {

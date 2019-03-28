@@ -1,5 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./index.css";
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -10,6 +8,8 @@ import App from "./components/App";
 import configureStore from "./state/store";
 import registerServiceWorker from "./workers/ServiceWorker";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 const store = configureStore();
 
 ReactDOM.render(
