@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-
+import PropTypes from "prop-types";
 import {chatActions} from "../../state/ducks/chat";
 
 class TypeForm extends Component {
@@ -40,6 +40,10 @@ class TypeForm extends Component {
       </form>
     );
   }
+}
+
+TypeForm.propTypes = {
+  addMessage: PropTypes.func
 }
 
 const mapDispatchToProps = dispatch => {
