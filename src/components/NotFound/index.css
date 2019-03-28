@@ -1,0 +1,8 @@
+.errorMain {
+  color: white;
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
